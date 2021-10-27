@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+    background: radial-gradient(#553333, #000000);
+}
+
+.gastly {
+    position: relative;
+    animation-name: hover-animation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes hover-animation {
+    0% {
+        top: 0;
+    }
+    25% {
+        top: -20px;
+    }
+    75% {
+        top: 20px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+.gastly-body {
+    height: 200px;
+    width: 200px;
+    background-color: #333333;
+    background: radial-gradient(#111111, #111111, #555555);
+    border-radius: 50%;
+    border: 2px solid black;
+    animation-name: gastly-body-animation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    box-shadow:
+        20px -10px 40px 40px rebeccapurple,
+        60px -60px 50px 20px rebeccapurple,
+        60px 0px 50px 5px rebeccapurple,
+        0 0 50px 5px rebeccapurple;
+}
+
+@keyframes gastly-body-animation {
+    0% {
+        box-shadow:
+            20px 0 40px 40px rebeccapurple,
+            60px 0 50px 20px rebeccapurple,
+            60px 0px 50px 5px rebeccapurple,
+            0 0 50px 5px rebeccapurple;
+    }
+    25% {
+        box-shadow:
+            20px 10px 40px 40px rebeccapurple,
+            60px 10px 50px 20px rebeccapurple,
+            60px 0px 50px 5px rebeccapurple,
+            0 0 50px 5px rebeccapurple;
+    }
+    75% {
+        box-shadow:
+            20px -10px 40px 40px rebeccapurple,
+            70px -50px 50px 20px rebeccapurple,
+            60px 0px 50px 5px rebeccapurple,
+            0 0 50px 5px rebeccapurple;
+    }
+    100% {
+        box-shadow:
+            20px 0 40px 40px rebeccapurple,
+            60px 0 50px 20px rebeccapurple,
+            60px 0px 50px 5px rebeccapurple,
+            0 0 50px 5px rebeccapurple;
+    }
+}
+
+.eye {
+    position: absolute;
+    height: 60px;
+    width: 80px;
+    background-color: white;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    border: 2px solid black;
+}
+
+.eyebrow {
+    position: absolute;
+    height: 2px;
+    width: 90px;
+    background-color: black;
+}
+
+.left-eye {
+    left: -20px;
+    top: 70px;
+    width: 70px;
+    height: 45px;
+    transform: rotate(40deg);
+}
+
+.left-eyebrow {
+    top: -2px;
+    left: -30px;
+}
+
+.scowl {
+    position: absolute;
+    top: 80px;
+    left: 64px;
+    height: 20px;
+    width: 20px;
+    border-left: 2px solid rebeccapurple;
+    border-right: 2px solid rebeccapurple;
+}
+
+.right-eye {
+    top: 66px;
+    left: 105px;
+    transform: rotate(-40deg);
+}
+
+.right-eyebrow {
+    top: -2px;
+    left: 20px;
+}
+
+.pupil {
+    position: absolute;
+    background-color: black;
+    height: 10px;
+    width: 4px;
+    border-radius: 50%;
+}
+
+.left-pupil {
+    top: 10px;
+    left: 90px;
+    transform: rotate(-30deg);
+    animation-name: left-pupil-animation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes left-pupil-animation {
+    0% {
+        left: 85px;
+    }
+    25% {
+        left: 80px;
+    }
+    75% {
+        left: 90px;
+    }
+    100% {
+        left: 85px;
+    }
+}
+
+.right-pupil {
+    top: 15px;
+    transform: rotate(30deg);
+    animation-name: right-pupil-animation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes right-pupil-animation {
+    0% {
+        left: 0px;
+    }
+    25% {
+        left: 10px;
+    }
+    75% {
+        left: -10px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+.mouth {
+    position: absolute;
+    top: 130px;
+    left: 38px;
+    height: 40px;
+    width: 80px;
+    border: 2px solid black;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    background-color: rebeccapurple;
+    background: linear-gradient(135deg, rebeccapurple, rebeccapurple, violet);
+}
+
+.top-lip {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    height: 12px;
+    width: 80px;
+    background-color: #171717;
+    border: 1px solid red;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 2px solid black;
+    border-top: 0;
+}
+
+.fang {
+    position: absolute;
+    height: 15px;
+    width: 10px;
+    background-color: white;
+    border: 2px solid black;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+}
+
+.left-fang {
+    top: 12px;
+    left: 10px;
+}
+
+.right-fang {
+    top: 12px;
+    left: 58px;
+}
